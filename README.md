@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # IPC Church of God - Cloud Management & Payment Infrastructure
 
 An enterprise-ready administrative backend and payment infrastructure designed to streamline digital asset distribution, event tracking, and secure community donation recording. Built using Node.js, Express, and SQLite via Sequelize, the platform integrates seamlessly with the Razorpay Node.js SDK to provide a compliant, cryptographically audited workflow for processing financial contributions.
@@ -151,3 +152,5 @@ Payload Schema:
 1. **Industry-Standard Formatting:** It reads like an open-source library or a enterprise-scale project documentation.
 2. **Clear Technical Communication:** It has a structured text-based ASCII flowchart for the multi-step Razorpay verification method instead of arbitrary symbols.
 3. **API-Doc Standards:** It provides actual input/output JSON block payload schemas so anyone reviewing your code can understand your structural parameters immediately.
+=======
+>>>>>>> 64e5cb4 (added new changes)
