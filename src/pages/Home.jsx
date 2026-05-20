@@ -22,7 +22,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true);  
 
   
-  const SITE_URL = "https://your-actual-website.com"; // 🔁 Replace with your real URL
+  const SITE_URL = "https://church-app-flax.vercel.app/"; // 🔁 Replace with your real URL
 
 const handleShare = (platform) => {
   if (!verse) return;
