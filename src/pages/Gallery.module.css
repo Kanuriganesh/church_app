@@ -1,0 +1,310 @@
+.galleryPage {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.pageHeader {
+  margin-bottom: 32px;
+}
+
+.pageHeader h1 {
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.pageHeader p {
+  max-width: 760px;
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.9;
+  color: #475569;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.galleryCard {
+  position: relative;
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 28px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galleryCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.14);
+}
+
+.galleryImage {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.galleryCard:hover .galleryImage {
+  transform: scale(1.06);
+  filter: brightness(0.85);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to top,
+    rgba(15, 23, 42, 0.32),
+    rgba(15, 23, 42, 0.14)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.galleryCard:hover .overlay {
+  opacity: 1;
+}
+
+.zoomIcon {
+  width: 74px;
+  height: 74px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.91);
+  color: #ec4899;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.18);
+  transform: scale(0.88);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.galleryCard:hover .zoomIcon {
+  transform: scale(0.7);
+  background: rgba(255, 255, 255, 0.91);
+}
+
+/* MODAL */
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  background: rgba(2, 6, 23, 0.82);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: fadeIn 0.25s ease;
+}
+
+.modalContent {
+  position: relative;
+  width: min(1100px, 100%);
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: scaleIn 0.25s ease;
+}
+
+.modalImage{
+  width:100%;
+  height:90vh;
+  object-fit:cover;
+  border-radius:24px;
+}
+.closeButton {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.86);
+  color: #ffffff;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.closeButton:hover {
+  background: rgba(30, 41, 59, 0.96);
+  transform: scale(1.06);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .galleryGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .galleryImage {
+    height: 280px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .galleryPage {
+    padding-top: 28px;
+    padding-bottom: 48px;
+  }
+
+  .galleryGrid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .galleryCard {
+    border-radius: 20px;
+  }
+
+  .galleryImage {
+    height: 240px;
+  }
+
+  .pageHeader p {
+    font-size: 0.96rem;
+  }
+
+  .zoomIcon {
+    width: 62px;
+    height: 62px;
+    font-size: 1.35rem;
+  }
+
+  .modalBackdrop {
+    padding: 14px;
+  }
+
+  .modalImage {
+    border-radius: 16px;
+    max-height: 84vh;
+  }
+
+  .closeButton {
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  background: rgba(2, 6, 23, 0.82);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.modalContent {
+  position: relative;
+  width: auto;
+  max-width: 92vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalImage {
+  display: block;
+  max-width: 92vw;
+  max-height: 88vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  background: transparent;
+}
+
+.closeButton {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.86);
+  color: #ffffff;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .modalBackdrop {
+    padding: 12px;
+  }
+
+  .modalContent {
+    max-width: 96vw;
+    max-height: 88vh;
+  }
+
+  .modalImage {
+    max-width: 96vw;
+    max-height: 82vh;
+    border-radius: 16px;
+  }
+
+  .closeButton {
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 0.95rem;
+  }
+}

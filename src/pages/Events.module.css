@@ -1,0 +1,182 @@
+.eventsPage {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.pageHeader {
+  margin-bottom: 34px;
+}
+
+.pageHeader h1 {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.pageHeader p {
+  max-width: 760px;
+  font-size: 1.02rem;
+  line-height: 1.9;
+  color: #475569;
+  margin: 0;
+}
+
+.eventsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.eventCard {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.eventCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: #e2e8f0;
+}
+
+.eventImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.eventCard:hover .eventImage {
+  transform: scale(1.04);
+}
+
+.cardContent {
+  padding: 22px 22px 24px;
+}
+
+.eventTitle {
+  font-size: 1.45rem;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.03em;
+  color: #0f172a;
+  margin: 0 0 18px;
+}
+
+.metaList {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #334155;
+  font-size: 0.97rem;
+  line-height: 1.7;
+}
+
+.metaIcon {
+  color: #2563eb;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.description {
+  color: #475569;
+  font-size: 0.98rem;
+  line-height: 1.85;
+  margin: 0 0 14px;
+  transition: all 0.25s ease;
+}
+
+.clamped {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.expanded {
+  display: block;
+}
+
+.readMoreBtn {
+  border: none;
+  background: transparent;
+  color: #2563eb;
+  font-size: 0.96rem;
+  font-weight: 700;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+.readMoreBtn:hover {
+  color: #1d4ed8;
+}
+
+@media (max-width: 1100px) {
+  .eventsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .eventsPage {
+    padding-top: 28px;
+    padding-bottom: 48px;
+  }
+
+  .pageHeader {
+    margin-bottom: 24px;
+  }
+
+  .eventsGrid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .eventCard {
+    border-radius: 20px;
+  }
+
+  .imageWrapper {
+    height: 210px;
+  }
+
+  .cardContent {
+    padding: 18px 16px 20px;
+  }
+
+  .eventTitle {
+    font-size: 1.24rem;
+    margin-bottom: 16px;
+  }
+
+  .pageHeader p,
+  .metaItem,
+  .description,
+  .readMoreBtn {
+    font-size: 0.95rem;
+  }
+}
+
+

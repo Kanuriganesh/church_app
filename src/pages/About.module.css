@@ -1,0 +1,248 @@
+.aboutPage {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.pageTitle {
+  font-size: clamp(2.2rem, 3vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  color: #0f172a;
+  margin-bottom: 34px;
+  text-align: left;
+}
+
+.pastorSection {
+  margin-bottom: 36px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  padding: 36px 24px;
+  border-radius: 28px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  text-align: center;
+}
+.pastorName{
+  margin-top: 14px;
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: clamp(1.35rem, 2vw, 1.65rem);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #1e293b;
+  text-align: center;
+  position: relative;
+}
+
+.pastorImage {
+  height: 400px;
+  width: 400px;   
+  border-radius: 400px;
+  border: 6px solid #e0f2fe;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
+}
+
+.quote {
+  max-width: 900px;
+  margin: 10px 0 0;
+  font-size: clamp(1.15rem, 2vw, 1.7rem);
+  line-height: 1.9;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.quoteReference {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+
+.infoSection {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.infoCard {
+  padding: 30px 28px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.infoHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;  
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.icon {
+  font-size: 1.2rem;
+  color: #2563eb;
+}
+
+.infoHeader h2 {
+  font-size: clamp(1.0rem, 1vw, 1rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #0f172a;
+  margin: 0;
+}
+
+.infoCard p {
+  font-size: 1rem;
+  line-height: 1.95;
+  color: #475569;
+  margin: 0 0 16px;
+}
+
+.infoCard p:last-child {
+  margin-bottom: 0;
+}
+
+.timingList {
+  display: grid;
+  gap: 14px;
+}
+
+.timingItem {
+  padding: 18px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #f8fafc, #eef4ff);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.timingLabel {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.92rem;
+  color: #64748b;
+}
+
+.timingItem strong {
+  font-size: 1rem;
+  color: #0f172a;
+}
+
+@media (max-width: 1024px) {
+  .infoSection {
+    grid-template-columns: 1fr;
+  }
+
+  .pastorImage {
+    height: 280px;
+    width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutPage {
+    padding-top: 28px;
+    padding-bottom: 48px;
+  }
+
+  .pageTitle {
+    margin-bottom: 24px;
+  }
+
+  .card {
+    padding: 26px 18px;
+    border-radius: 20px;
+  }
+
+  .pastorImage {
+    height: 220px;
+    width: 220px;
+    border-width: 4px;
+  }
+
+  .quote {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .quoteReference {
+    font-size: 0.95rem;
+  }
+
+  .infoCard {
+    padding: 22px 18px;
+    border-radius: 18px;
+  }
+
+  .infoHeader {
+    margin-bottom: 16px;
+  }
+
+  .infoCard p {
+    font-size: 0.96rem;
+    line-height: 1.85;
+  }
+
+  .timingItem {
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .timingItem strong {
+    font-size: 0.96rem;
+  }
+   .infoHeader >h2 {
+    font-size: 15px;
+  }   
+
+  .toggleStyling>h3{
+    font-size: 9px !important;
+  
+}
+.toggleStyling{
+ justify-content:space-around !important;  
+ margin-left: 0px;
+ margin-right: 0px;
+}
+}
+
+
+
+.timingItem:hover {
+  transform: translateY(-4px); /* Moves it up 4 pixels */
+  background-color: #ffffff;   /* Ensure it's pure white */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); /* Soft depth */
+  border-color: #3b82f6; /* Subtle blue border to match your icon */
+}
+
+
+.specailStyling{
+ 
+  color: #3b82f6;
+  text-decoration:underline #2563eb;
+}
+
+.toggleStyling>h3{
+    font-size: 14px;
+    margin: 4px;
+}
+
+.toggleStyling>h3:hover{
+    cursor: pointer;
+}
+
+.toggleStyling{
+  padding: 4px;  
+ display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+  margin-bottom: 10px;
+}

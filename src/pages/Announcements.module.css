@@ -1,0 +1,145 @@
+.announcementsPage {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.pageHeader {
+  margin-bottom: 32px;
+}
+
+.pageHeader h1 {
+  font-size: clamp(2.2rem, 4vw, 3.3rem);
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.04em;
+  margin-bottom: 12px;
+}
+
+.pageHeader p {
+  max-width: 720px;
+  font-size: 1.02rem;
+  line-height: 1.9;
+  color: #475569;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.card {
+  position: relative;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
+}
+
+.upcoming {
+  border: 2px solid #3b82f6;
+  box-shadow: 0 0 14px rgba(59, 130, 246, 0.22);
+  animation: pulseHighlight 2s infinite;
+}
+
+@keyframes pulseHighlight {
+  0% {
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.18);
+  }
+  50% {
+    box-shadow: 0 0 24px rgba(59, 130, 246, 0.38);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.18);
+  }
+}
+
+.badge {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.card h2 {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.3;
+  margin-bottom: 18px;
+  letter-spacing: -0.03em;
+}
+
+.metaList {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #334155;
+}
+
+.icon {
+  color: #2563eb;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.description {
+  font-size: 0.98rem;
+  line-height: 1.85;
+  color: #475569;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .cardGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .announcementsPage {
+    padding-top: 28px;
+    padding-bottom: 48px;
+  }
+
+  .cardGrid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .card {
+    padding: 20px 18px;
+    border-radius: 18px;
+  }
+
+  .card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+  }
+
+  .pageHeader p,
+  .description,
+  .metaItem {
+    font-size: 0.95rem;
+  }
+}
