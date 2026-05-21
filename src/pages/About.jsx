@@ -51,8 +51,8 @@ export default function About() {
             <h2>Timings :</h2>    
           </div>   
           <div className={styles.toggleStyling}>
-               <h3  onClick={()=> setToggleChurch("ipc")} className={toggleChurch ==="ipc"?styles.specailStyling:""}>SURYANARAYANA COLONY</h3>   
-               <h3 onClick={()=> setToggleChurch("sub")} className={toggleChurch !=="ipc"?styles.specailStyling:""}>SUBRAHMANYAM COLONY</h3>
+               <h3  onClick={()=> setToggleChurch("ipc")} className={toggleChurch ==="ipc"?styles.specailStyling:""}>SURYANARAYANA-COL</h3>   
+               <h3 onClick={()=> setToggleChurch("sub")} className={toggleChurch !=="ipc"?styles.specailStyling:""}>SUBRAHMANYAM-COL</h3>
           </div>
           {
               toggleChurch === "ipc"  ?   

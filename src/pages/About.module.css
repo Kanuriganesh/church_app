@@ -147,6 +147,41 @@
   }
 }
 
+
+
+
+.timingItem:hover {
+  transform: translateY(-4px); /* Moves it up 4 pixels */
+  background-color: #ffffff;   /* Ensure it's pure white */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); /* Soft depth */
+  border-color: #3b82f6; /* Subtle blue border to match your icon */
+}
+
+
+.specailStyling{
+ 
+  color: #3b82f6;
+  text-decoration:underline #2563eb;
+}
+
+.toggleStyling>h3{
+    font-size: 14px;
+    margin: 4px;
+}
+
+.toggleStyling>h3:hover{
+    cursor: pointer;
+}
+
+.toggleStyling{
+  padding: 4px;  
+ display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+
 @media (max-width: 768px) {
   .aboutPage {
     padding-top: 28px;
@@ -204,7 +239,8 @@
   }   
 
   .toggleStyling>h3{
-    font-size: 9px !important;
+    font-size: 11px !important;   
+    font-weight: bold;
   
 }
 .toggleStyling{
@@ -212,37 +248,4 @@
  margin-left: 0px;
  margin-right: 0px;
 }
-}
-
-
-
-.timingItem:hover {
-  transform: translateY(-4px); /* Moves it up 4 pixels */
-  background-color: #ffffff;   /* Ensure it's pure white */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); /* Soft depth */
-  border-color: #3b82f6; /* Subtle blue border to match your icon */
-}
-
-
-.specailStyling{
- 
-  color: #3b82f6;
-  text-decoration:underline #2563eb;
-}
-
-.toggleStyling>h3{
-    font-size: 14px;
-    margin: 4px;
-}
-
-.toggleStyling>h3:hover{
-    cursor: pointer;
-}
-
-.toggleStyling{
-  padding: 4px;  
- display: flex;
- flex-direction: row;
- justify-content: space-around;
-  margin-bottom: 10px;
 }
